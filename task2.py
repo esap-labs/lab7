@@ -22,8 +22,8 @@ if __name__ == '__main__':
 
     # Load the MNIST dataset
     transform=transforms.Compose([ transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))])
-    trainset = datasets.MNIST('/home/pi/ee347/lab6/data', train=True, download=True, transform=transform)
-    testset = datasets.MNIST('/home/pi/ee347/lab6/data', train=False, transform=transform)
+    trainset = datasets.MNIST('/home/pi/ee347/lab7/data', train=True, download=True, transform=transform)
+    testset = datasets.MNIST('/home/pi/ee347/lab7/data', train=False, transform=transform)
     train_loader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True)
     test_loader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False)
 
